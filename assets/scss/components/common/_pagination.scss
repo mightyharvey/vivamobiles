@@ -1,0 +1,60 @@
+
+.pagination-container {
+  width: 100%;
+  margin-top: $gutter*2.5;
+
+  .review-grid-container & {
+    margin-top: 0;
+  }
+}
+
+.pagination-list {
+  @extend %clearfix;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-item {
+  font-size: 14px;
+
+  &.previous {
+    float: left;
+    padding-right: $gutter/2;
+    text-align: left;
+  }
+
+  &.next {
+    float: right;
+    padding-left: $gutter/2;
+    text-align: right;
+  }
+
+  .icon-arrow-right,
+  .icon-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    margin-top: -7px;
+  }
+
+  .icon-arrow-right {
+    right: 0;
+  }
+
+}
+
+.pagination-link {
+  position: relative;
+  display: block;
+  margin: 10px;
+
+  .next & {
+    padding-right: $gutter;
+  }
+
+  .previous & {
+    padding-left: $gutter;
+  }
+}
